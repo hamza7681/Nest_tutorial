@@ -41,11 +41,11 @@ export class UsersController {
     ];
   }
   //   One way to make post request
-  //   @Post()
-  //   createUser(@Req() req: Request, @Res() res: Response) {
-  //     const data = req.body;
-  //     res.json(data);
-  //   }
+  @Post()
+  createUser(@Req() req: Request, @Res() res: Response) {
+    const data = req.body;
+    res.json(data);
+  }
 
   //   otherway to post request is to use @Body decorator
   @Post()
@@ -61,9 +61,9 @@ export class UsersController {
     }
   }
 
-  //   @Get()
-  //   getUsersList(@Query('sortBy') sortBy: string) {
-  //     console.log(sortBy);
-  //     return sortBy;
-  //   }
+  @Get()
+  getUsersList(@Query('sortBy') sortBy: string) {
+    console.log(sortBy);
+    return sortBy;
+  }
 }
