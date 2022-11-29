@@ -42,7 +42,7 @@ export class UsersController {
   }
   //   One way to make post request
   @Post()
-  createUser(@Req() req: Request, @Res() res: Response) {
+  createUsers(@Req() req: Request, @Res() res: Response) {
     const data = req.body;
     res.json(data);
   }
